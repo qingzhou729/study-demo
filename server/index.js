@@ -21,7 +21,7 @@ middleware(app);
 const staticPath = './static'
 app.use(static(
     path.join( __dirname, staticPath), {
-    maxage: 2592000000,
+    maxage: 60,
 }));
 
 const PORT = 3000;
