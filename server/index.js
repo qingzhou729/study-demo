@@ -4,6 +4,8 @@ const middleware = require('./middleware');
 // const Store = require("./utils/Store.js");
 const body = require('koa-body');
 const etag = require('koa-etag');
+const static = require('koa-static');
+const path = require('path');
 const app = new Koa();
 
 // session配置
@@ -16,6 +18,8 @@ app.use(body());
 app.use(etag());
 // 中间件
 middleware(app);
+const staticPath = './static'
+app.use(static(path.join( __dirname, staticPath)));
 
 const PORT = 3000;
 // 服务启动
