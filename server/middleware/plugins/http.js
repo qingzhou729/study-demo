@@ -7,7 +7,7 @@ module.exports = () => {
         ctx.set('Access-Control-Allow-Credentials', true);
         ctx.set('Access-Control-Allow-Headers', 'content-type');
         ctx.set('Access-Control-Allow-Methods', 'OPTIONS, GET, HEAD, PUT, POST, DELETE, PATCH');
-        ctx.set('cache-control', 'public, max-age=60');
+        ctx.set('Cache-Control', 'public, max-age=60');
          ctx.set('Etag', hash);
         if (ctx.method == 'OPTIONS') {
             ctx.body = 200; 
