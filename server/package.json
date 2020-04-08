@@ -19,6 +19,7 @@
   "homepage": "https://github.com/yukiyang0729/dandelion-server#readme",
   "dependencies": {
     "content-disposition": "^0.5.3",
+    "crypto": "^1.0.1",
     "ioredis": "^4.5.1",
     "js-shortid": "^0.1.1",
     "koa": "^2.6.2",
