@@ -19,7 +19,7 @@ app.use(etag());
 // 中间件
 middleware(app);
 const staticPath = './static'
-app.use(static(path.join( __dirname, staticPath)));
+app.use(static(path.join( __dirname, staticPath), 60));
 
 const PORT = 3000;
 // 服务启动
