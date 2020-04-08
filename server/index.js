@@ -3,6 +3,7 @@ const middleware = require('./middleware');
 // const session = require("koa-session2");
 // const Store = require("./utils/Store.js");
 const body = require('koa-body');
+const etag = require('koa-etag');
 const app = new Koa();
 
 // session配置
@@ -12,6 +13,7 @@ const app = new Koa();
 // }));
 // 解析 post 参数
 app.use(body());
+app.use(etag());
 // 中间件
 middleware(app);
 
