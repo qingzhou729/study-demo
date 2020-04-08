@@ -19,7 +19,10 @@ app.use(etag());
 // 中间件
 middleware(app);
 const staticPath = './static'
-app.use(static(path.join( __dirname, staticPath), 60));
+app.use(static(
+    path.join( __dirname, staticPath), {
+    maxage: 2592000000,
+}));
 
 const PORT = 3000;
 // 服务启动
