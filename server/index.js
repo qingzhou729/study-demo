@@ -4,6 +4,7 @@ const middleware = require('./middleware');
 // const Store = require("./utils/Store.js");
 const body = require('koa-body');
 const etag = require('koa-etag');
+const conditional = require('koa-conditional-get');
 const static = require('koa-static');
 const path = require('path');
 const app = new Koa();
@@ -15,6 +16,7 @@ const app = new Koa();
 // }));
 // 解析 post 参数
 app.use(body());
+app.use(conditional());
 app.use(etag());
 // 中间件
 middleware(app);
