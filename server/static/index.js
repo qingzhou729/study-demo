@@ -1,1 +1,1 @@
-console.log(111);
+console.log('浏览器缓存测试');
