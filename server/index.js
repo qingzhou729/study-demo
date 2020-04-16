@@ -1,7 +1,14 @@
 const Koa = require('koa');
 const static = require('koa-static');
+
+const etag = require('koa-etag');
+const conditional = require('koa-conditional-get');
+
 const path = require('path');
 const app = new Koa();
+
+app.use(conditional());
+app.use(etag());
 
 const staticPath = './static';
 app.use(static(
@@ -13,6 +20,11 @@ const PORT = 8001;
 // 服务启动
 app.listen(PORT);
 console.log(`server is starting at port ${PORT}`);
+
+
+
+
+
 
 
 
