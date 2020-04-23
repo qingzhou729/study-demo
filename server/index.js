@@ -9,7 +9,7 @@ const app = new Koa();
 
 app.use(conditional());
 app.use(etag());
-app.use(middleware());
+middleware(app);
 const staticPath = './static';
 app.use(static(
     path.join( __dirname, staticPath), {
