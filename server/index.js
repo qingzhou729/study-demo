@@ -4,10 +4,12 @@ const static = require('koa-static');
 const path = require('path');
 const conditional = require('koa-conditional-get');
 const etag = require('koa-etag');
+const middleware = require('./middleware/index');
 const app = new Koa();
 
 app.use(conditional());
 app.use(etag());
+app.use(middleware());
 const staticPath = './static';
 app.use(static(
     path.join( __dirname, staticPath), {
