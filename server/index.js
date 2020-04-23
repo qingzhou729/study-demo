@@ -16,7 +16,7 @@ app.use(static(
     maxage: 10 * 1000, // 设置cache-control 的max-age缓存时间
 }));
 
-const PORT = 8001;
+const PORT = 80;
 // 服务启动
 app.listen(PORT);
 console.log(`server is starting at port ${PORT}`);
